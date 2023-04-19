@@ -6,6 +6,8 @@ function App() {
   const [lng, setLng] = useState(null);
   const [status, setStatus] = useState(null);
 
+  console.log("Message from .env:" + import.meta.env.VITE_MESSAGE);
+
   const getLocation = () => {
     if (!navigator.geolocation) {
       setStatus("Geolocation is not supported by your browser!");
